@@ -9,7 +9,7 @@
 import UIKit
 
 protocol HomeViewControllerPresentationLogic {
-    func present(response: HomeViewController.Something.Response)
+    func present(response: HomeViewController.GetPackages.Response)
 }
 
 class HomeViewControllerPresenter: HomeViewControllerPresentationLogic {
@@ -17,8 +17,8 @@ class HomeViewControllerPresenter: HomeViewControllerPresentationLogic {
 
     // MARK: Presentation Logic
     
-    func present(response: HomeViewController.Something.Response) {
-        let viewModel = HomeViewController.Something.ViewModel()
+    func present(response: HomeViewController.GetPackages.Response) {
+        let viewModel = HomeViewController.GetPackages.ViewModel()
         viewController?.display(viewModel: viewModel)
     }
 }

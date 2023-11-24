@@ -11,7 +11,7 @@ import UIKit
 enum HomeViewController {
     
     // MARK: Use cases
-    enum Something {
+    enum GetPackages {
         struct Request {
         }
         struct Response {

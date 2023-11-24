@@ -24,6 +24,15 @@
 		A8047DAD2B10035D001F0783 /* DetailViewControlelrInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8047DA72B10035D001F0783 /* DetailViewControlelrInteractor.swift */; };
 		A8047DAE2B10035D001F0783 /* DetailViewControlelrView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8047DA82B10035D001F0783 /* DetailViewControlelrView.xib */; };
 		A8047DB12B100379001F0783 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8047DB02B100379001F0783 /* ViewControllerFactory.swift */; };
+		A88386122B1005A200AC0AD7 /* EndpointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88386112B1005A200AC0AD7 /* EndpointType.swift */; };
+		A88386142B1005B600AC0AD7 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88386132B1005B600AC0AD7 /* NetworkProvider.swift */; };
+		A88386162B1005C600AC0AD7 /* RemoteEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88386152B1005C600AC0AD7 /* RemoteEndpoint.swift */; };
+		A883861D2B1006BD00AC0AD7 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A883861C2B1006BD00AC0AD7 /* URLs.swift */; };
+		A88386202B1007A600AC0AD7 /* RemoteEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A883861F2B1007A600AC0AD7 /* RemoteEntities.swift */; };
+		A88386232B1007C800AC0AD7 /* RemoteEncoders.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88386222B1007C800AC0AD7 /* RemoteEncoders.swift */; };
+		A88386252B1007F600AC0AD7 /* URLQueryEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88386242B1007F600AC0AD7 /* URLQueryEncoder.swift */; };
+		A88386282B10089A00AC0AD7 /* InternetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88386272B10089A00AC0AD7 /* InternetManager.swift */; };
+		A883862A2B10092A00AC0AD7 /* PackageEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88386292B10092A00AC0AD7 /* PackageEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +55,15 @@
 		A8047DA72B10035D001F0783 /* DetailViewControlelrInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControlelrInteractor.swift; sourceTree = "<group>"; };
 		A8047DA82B10035D001F0783 /* DetailViewControlelrView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewControlelrView.xib; sourceTree = "<group>"; };
 		A8047DB02B100379001F0783 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
+		A88386112B1005A200AC0AD7 /* EndpointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointType.swift; sourceTree = "<group>"; };
+		A88386132B1005B600AC0AD7 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		A88386152B1005C600AC0AD7 /* RemoteEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteEndpoint.swift; sourceTree = "<group>"; };
+		A883861C2B1006BD00AC0AD7 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
+		A883861F2B1007A600AC0AD7 /* RemoteEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteEntities.swift; sourceTree = "<group>"; };
+		A88386222B1007C800AC0AD7 /* RemoteEncoders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteEncoders.swift; sourceTree = "<group>"; };
+		A88386242B1007F600AC0AD7 /* URLQueryEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLQueryEncoder.swift; sourceTree = "<group>"; };
+		A88386272B10089A00AC0AD7 /* InternetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetManager.swift; sourceTree = "<group>"; };
+		A88386292B10092A00AC0AD7 /* PackageEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +96,13 @@
 		A8047D7F2B100294001F0783 /* bundleCase */ = {
 			isa = PBXGroup;
 			children = (
+				A88386262B10088E00AC0AD7 /* Managers */,
+				A88386212B1007B900AC0AD7 /* Encoding */,
+				A883861E2B10078D00AC0AD7 /* Entities */,
+				A88386102B10058200AC0AD7 /* Services */,
 				A8047DAF2B100368001F0783 /* ViewControllerFactory */,
 				A8047DB22B10049D001F0783 /* AppAndSceneDelegates */,
+				A883861B2B1006AF00AC0AD7 /* Constants */,
 				A8047D892B100294001F0783 /* Assets.xcassets */,
 				A8047D8B2B100294001F0783 /* LaunchScreen.storyboard */,
 				A8047D8E2B100294001F0783 /* Info.plist */,
@@ -138,6 +161,50 @@
 				A8047D822B100294001F0783 /* SceneDelegate.swift */,
 			);
 			path = AppAndSceneDelegates;
+			sourceTree = "<group>";
+		};
+		A88386102B10058200AC0AD7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A88386112B1005A200AC0AD7 /* EndpointType.swift */,
+				A88386132B1005B600AC0AD7 /* NetworkProvider.swift */,
+				A88386152B1005C600AC0AD7 /* RemoteEndpoint.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A883861B2B1006AF00AC0AD7 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				A883861C2B1006BD00AC0AD7 /* URLs.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		A883861E2B10078D00AC0AD7 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				A883861F2B1007A600AC0AD7 /* RemoteEntities.swift */,
+				A88386292B10092A00AC0AD7 /* PackageEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		A88386212B1007B900AC0AD7 /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				A88386222B1007C800AC0AD7 /* RemoteEncoders.swift */,
+				A88386242B1007F600AC0AD7 /* URLQueryEncoder.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		A88386262B10088E00AC0AD7 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				A88386272B10089A00AC0AD7 /* InternetManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,19 +279,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A88386122B1005A200AC0AD7 /* EndpointType.swift in Sources */,
 				A8047DA12B10034C001F0783 /* HomeViewControllerInteractor.swift in Sources */,
 				A8047DB12B100379001F0783 /* ViewControllerFactory.swift in Sources */,
+				A88386232B1007C800AC0AD7 /* RemoteEncoders.swift in Sources */,
+				A883861D2B1006BD00AC0AD7 /* URLs.swift in Sources */,
+				A883862A2B10092A00AC0AD7 /* PackageEntity.swift in Sources */,
+				A88386252B1007F600AC0AD7 /* URLQueryEncoder.swift in Sources */,
 				A8047D9D2B10034C001F0783 /* HomeViewControllerPresenter.swift in Sources */,
 				A8047DA92B10035D001F0783 /* DetailViewControlelrPresenter.swift in Sources */,
+				A88386202B1007A600AC0AD7 /* RemoteEntities.swift in Sources */,
 				A8047D9F2B10034C001F0783 /* HomeViewControllerModels.swift in Sources */,
 				A8047DAC2B10035D001F0783 /* DetailViewControlelrViewController.swift in Sources */,
 				A8047DAA2B10035D001F0783 /* DetailViewControlelrRouter.swift in Sources */,
 				A8047D9E2B10034C001F0783 /* HomeViewControllerRouter.swift in Sources */,
 				A8047DAD2B10035D001F0783 /* DetailViewControlelrInteractor.swift in Sources */,
 				A8047DA02B10034C001F0783 /* HomeViewControllerViewController.swift in Sources */,
+				A88386282B10089A00AC0AD7 /* InternetManager.swift in Sources */,
 				A8047DAB2B10035D001F0783 /* DetailViewControlelrModels.swift in Sources */,
+				A88386162B1005C600AC0AD7 /* RemoteEndpoint.swift in Sources */,
 				A8047D812B100294001F0783 /* AppDelegate.swift in Sources */,
 				A8047D832B100294001F0783 /* SceneDelegate.swift in Sources */,
+				A88386142B1005B600AC0AD7 /* NetworkProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,7 @@
 import UIKit
 
 protocol HomeViewControllerDisplayLogic: AnyObject {
-    func display(viewModel: HomeViewController.Something.ViewModel)
+    func display(viewModel: HomeViewController.GetPackages.ViewModel)
 }
 
 class HomeViewControllerViewController: UIViewController, HomeViewControllerDisplayLogic {
@@ -20,13 +20,13 @@ class HomeViewControllerViewController: UIViewController, HomeViewControllerDisp
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let request = HomeViewController.Something.Request()
+        let request = HomeViewController.GetPackages.Request()
         interactor?.handle(request: request)
     }
 
     // MARK: Requests
 
-    func display(viewModel: HomeViewController.Something.ViewModel) {
+    func display(viewModel: HomeViewController.GetPackages.ViewModel) {
     
     }
 }

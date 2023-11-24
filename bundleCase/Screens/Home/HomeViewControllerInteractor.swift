@@ -9,7 +9,7 @@
 import UIKit
 
 protocol HomeViewControllerBusinessLogic {
-    func handle(request: HomeViewController.Something.Request)
+    func handle(request: HomeViewController.GetPackages.Request)
 }
 
 class HomeViewControllerInteractor: HomeViewControllerBusinessLogic {
@@ -17,8 +17,11 @@ class HomeViewControllerInteractor: HomeViewControllerBusinessLogic {
     
     // MARK: Business Logic
 
-    func handle(request: HomeViewController.Something.Request) {
-        let response = HomeViewController.Something.Response()
-        presenter?.present(response: response)
+    func handle(request: HomeViewController.GetPackages.Request) {
+        NetworkManager.shared.getPackages { result in
+            print(result)
+        } failure: { error in
+            print(error)
+        }
     }
 }
